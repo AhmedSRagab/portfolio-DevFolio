@@ -1,0 +1,580 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+
+}
+:root{
+    --header-color:#000;
+    --body-color:#4E4E4E;
+    --color-primary:#0078ff;
+    --color-shadwo-hover:#CDE1F8;
+    --main-color:#fff;
+   
+}
+body{
+    background-color: #f5f5f5;
+    --bs-body-color: var(--body-color);
+}
+h1
+h2
+h3
+h4
+h5
+h6{
+    color: var(--header-color);
+    margin-bottom:0;
+}
+a{
+    text-decoration: none;
+}
+ol, ul {
+    padding-left: 0;
+}
+li{
+    list-style: none;
+
+}
+.line-mf {
+    width: 40px;
+    height: 5px;
+    background-color: rgb(0, 120, 255);
+    margin: 0px auto;
+}
+
+.animation {
+    width: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    animation: width 1s linear infinite alternate;
+    animation-delay: 1s;
+    border-right: 5px solid rgb(255, 255, 255);
+  }
+  @keyframes width {
+    0% {
+      width: 0;
+    }
+    15% {
+      width: 40px;
+    }
+    25% {
+      width: 60px;
+    }
+    50% {
+      width: 100px;
+    }
+    75% {
+      width: 130px;
+    }
+    85% {
+      width: 150px;
+    }
+    100% {
+      width: 160px;
+    }
+  }
+header{
+    opacity: 90%;
+    z-index: 9999;
+}
+header .navbar{
+    --bs-navbar-padding-y: 0;
+}
+.nav-main ul{
+height: 100vh;
+}
+header .navbar ul li{
+    --bs-link-hover-color-rgb: #93c6ff;
+    --bs-emphasis-color-rgb: #93c6ff;
+}
+header .navbar ul li>.active{
+    --bs-navbar-active-color: #0d6efd;
+}
+.btn-main{
+    --bs-emphasis-color-rgb:#fff;
+}
+.navbar-toggler-icon{
+ --bs-emphasis-color-rgb:#fff; 
+ --bs-secondary-color:#fff;
+}
+/* *******nav end********* */
+.home{
+    background-image: url(../imeg/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.home .overlay-itro {
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0.9;
+}
+.home .home-text>h1{
+    font-size: 3rem;
+}
+/* *******home end********* */
+
+.about .about-img>img{
+  width: 35%;
+  
+}
+.about .progmotion .promode{
+    --bs-border-radius:none;
+    --bs-progress-height:0.7rem;
+}
+.about .main-about{
+    --bs-gutter-x:0;
+    padding-block: 4rem;
+    background-color: #fff;
+}
+.about .main-car{
+    --bs-border-radius:none;
+   
+    --bs-border-color-translucent:transparent;
+}
+
+ .about .main-text-2 .card-body>h1::after{
+    content: "";
+    width: 22%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: rgb(0, 120, 255);
+}  
+/* *******about end********* */
+/* *******services start********* */
+
+.services .text-services{
+    padding-bottom: 4rem;
+}
+.services .text-services>h2{
+    font-size: 48px;
+    --bs-heading-color: #000;
+}
+.services .demo-services{
+   margin-block: 2.5rem;
+   --bs-card-title-color: #000;
+}
+.services .services-card .demo-card{
+    --bs-border-radius: 1rem;
+
+}
+.services .container .icon{
+        box-shadow: 0 0 0 10px #0078ff;
+        height: 100px;
+        width: 100px;
+  }
+.services .container .icon,.counter-section .container .icon{
+        font-size: 2rem;
+        border-radius: 50%;
+        line-height: 1.55;
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+        transition: all 500ms ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .demo-services:hover .icon{
+    transition: all 500ms ease;
+    color: #fff;
+    background-color: #0078ff;
+    box-shadow: 0 0 0 10px #cde1f8;
+  }
+  .services .container .inner-service:hover i {
+    background-color: #0078ff;
+    color: white;
+    border-width: 0;
+    box-shadow: 0 0 0 10px #cde1f8;
+  }
+/* *******services end********* */
+/* *******counter start********* */
+.counter-section {
+background-image: url(../imeg/counters-bg.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center center;
+position: relative;
+--bs-body-color:#fff;
+padding: 8rem 0px;
+}
+
+
+.counter-section .overlay-mf {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    background-color: #0078ff;
+}
+.counter-section .main-counter> {
+    --bs-body-bg:transparent;
+
+}
+.counter-section .icon {
+    width:60%;
+    transition: all 500ms ease;
+    color: #fff;
+    background-color: transparent;
+    box-shadow: 0 0 0 10px #cde1f8;
+  }
+ 
+.counter-section  .card{
+    --bs-border-radius:none;
+    --bs-border-width:none;
+    --bs-border-color-translucent:transparent;
+}
+/* *******counter end********* */
+/* *******portfolio start********* */
+.portfolio {
+    padding-top: 4rem;
+
+}
+.portfolio .card{
+    --bs-card-title-color: #000;
+
+}
+.portfolio .card-text{
+    font-size: 0.8rem;
+
+}
+
+.portfolio .main-portfolio .text-portfolio{
+    padding-bottom: 4rem;
+}
+.portfolio .main-portfolio .text-portfolio>h3{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.portfolio .main-portfolio .demo-card img{
+    transition: all 1s;
+}
+
+.portfolio .main-portfolio .demo-card:hover img {
+    transform: scale(1.3);
+  }
+.portfolio .main-portfolio .portfolio-ico{
+    overflow: hidden;
+}
+.portfolio .porto-blue{
+    color: var(--color-primary);
+    
+}
+.portfolio .blus-icon a>span{
+    font-size: 2.5rem;
+}
+/* *******portfolio end********* */
+/* *******testimonials start********* */
+.testimonials-section {
+    background-image: url(../imeg/overlay-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    position: relative;
+    --bs-body-color:#fff;
+    padding-top: 8rem;
+    padding-bottom: 0;
+    }
+    
+    
+    .testimonials-section .overlay-mf ,.contact .overlay-mf{
+        position: absolute;
+        top: 0;
+        left: 0px;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0.7;
+        background-color: #0078ff;
+    }
+    .carousel .main-test .header-test{
+        font-size: 1.4rem;
+    }
+    .carousel-control-next-icon, .carousel-control-prev-icon{
+        display: none;
+    }
+    .carousel-indicators {
+        position: relative;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    .carousel-indicators [data-bs-target] {
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 50%;}
+    
+/* *******testimonials end********* */
+/* *******testimonials end********* */
+.blog {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.blog .card{
+    --bs-card-title-color: #000;
+
+}
+.blog .main-blog .text-blog{
+    padding-bottom: 4rem;
+}
+.blog .main-blog .text-blog>h4{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.text-badg{
+    position: absolute;
+    text-align: center;
+    top: -16px;
+    left: 15px;
+    right: 15px;
+    line-height: 25px;
+    overflow: hidden;
+    padding: 0 15px 5px;
+    overflow: hidden;
+    border-radius: 4px;
+    .main-badg{
+    display: inline-block;
+    color: #fff;
+    padding: 0 15px 5px;
+    overflow: hidden;
+    background-color: #0078ff;
+    border-radius: 4px;
+        .badge{
+        color: #fff;
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 0.7rem;
+        letter-spacing: 0.1px;
+        margin-bottom: 0; 
+        --bs-primary-rgb:transparent;
+    } 
+    }
+   
+}
+.avatar {
+    width: 32px;
+    height: 32px;
+    margin-right: 4px;
+    overflow: hidden;
+}
+/* *******testimonials end********* */
+/* *******contact end********* */
+.contact{
+    background-image: url(../imeg/overlay-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    position: relative;
+   
+    padding: 8rem 0px;
+    }
+
+.contact .main-card .main-contact {
+    --bs-gutter-x:0;
+} 
+.contact .main-card .main-contact .text-header>h5::after{
+    content: "";
+    width: 22%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: rgb(0, 120, 255);
+} 
+.contact .main-text-2 .card-body>h1::after{
+    content: "";
+    width: 22%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: rgb(0, 120, 255);
+} 
+.contact .main-car{
+  --bs-border-radius:none;
+    --bs-border-color-translucent:transparent;
+   ul{
+    line-height: 2;
+   }
+    li{
+     span {
+       
+        color: #0078ff;
+        margin-right: 10px;
+        .fa-brands{
+            color: #000;
+        }
+        .fa-brands:hover{
+            color: #fff;
+        }
+    }
+   }
+   .icon-last span {
+    height: 40px;
+    width: 40px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    line-height: 1.6;
+    margin: 0 15px 0 0;
+    box-shadow: 0 0 0 3px #0078ff;
+    transition: all 500ms ease;
+   }
+   .icon-last span:hover{
+    background-color: #0078ff;
+    color: #fff;
+    box-shadow: 0 0 0 3px #cde1f8;
+    transition: all 500ms ease;
+   }
+}
+.btn{
+    background: #0078ff;
+    border: 0;
+    padding: 10px 24px;
+    color: #fff;
+    transition: 0.4s;
+    font-size: 1.2rem;
+}
+.contact form input{
+  
+    border: 1;
+}
+.contact form .btn:hover{
+    box-shadow: 0 0 0 4px #cde1f8;
+    border: 0;
+}
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #0d6efd;
+    --bs-btn-border-color: #0d6efd;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #3393ff;
+    --bs-btn-hover-border-color: none;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #0a58ca;
+    --bs-btn-active-border-color: #0a53be;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #0d6efd;
+    --bs-btn-disabled-border-color: #0d6efd;
+}
+/* *******contact end********* */
+/* *******footer start********* */
+footer {
+    text-align: center;
+    color: #fff;
+    padding: 25px 0;
+    background: #0062d3;
+}
+footer .copyright {
+    margin-bottom: 0.3rem;
+}
+footer .credits a {
+    color: #fff;
+}
+/* *******footer end********* */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *******media********* */
+
+/* sm */
+@media (min-width:640px) {
+    .about .about-img>img {
+        width: 75%;
+        border-radius: .5rem;
+    }    
+  
+}
+
+/* md */
+@media (min-width:768px) {
+    .counter-section .icon {
+        width: 50%;
+    }
+    .testimonials .carousel-inner .main-pragraf>p{
+        padding: 0 5rem;
+        font-weight: 300;
+    }
+    .blog .card-footer{
+        flex-direction: column;
+    }
+}
+@media (min-width:1024px) {
+   .nav-home{
+    background-color: #000;
+   }
+    .nav-main{
+        --bs-white-rgb: transparent;
+    }
+    .nav-main ul{
+        height: 100%;
+       --bs-navbar-color: #fff;
+        }
+    .nav-main ul:hover{
+        --bs-navbar-hover-color:#fff;
+        --bs-emphasis-color-rgb:#fff;
+        }
+        header .navbar ul li{
+            position: relative;
+            padding: 10px 0 10px 30px;
+        }
+        header .navbar ul li::after{
+            content: "";
+            width: 0%;
+            height: 1.5px;
+            background-color: #fff;
+            position: absolute;
+            bottom:11%;
+            transition: all 0.3s;
+        }
+        header .navbar ul li:hover:after{
+            width: 80%;
+        }
+        header .navbar ul li>.active{
+            --bs-navbar-active-color: #fff;
+        }
+        header .navbar ul li>.active::after{
+            content: "";
+            width: 80%;
+            height: 1.5px;
+            background-color: #fff;
+            position: absolute;
+            left: 0;
+            bottom:0;
+            transition: all 0.3s;
+        }
+/* *******home end********* */
+/* *******contact start********* */
+.contact .main-text-2{
+    background-color: #fff;
+    z-index: 9;
+}
+/* *******contact end********* */
+.counter-section .icon {
+    width: 22%;
+}
+.blog .card-footer {
+    flex-direction: row;
+}
+}
